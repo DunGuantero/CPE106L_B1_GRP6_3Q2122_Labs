@@ -5,7 +5,7 @@ Program: generator_modified.py
 
 import random
 
-articles = lines = tuple([i.strip() for i in open("articles.txt", 'r').readlines()])
+articles = tuple([i.strip() for i in open("articles.txt", 'r').readlines()])
 nouns = tuple([i.strip() for i in open("nouns.txt", 'r').readlines()])
 verbs = tuple([i.strip() for i in open("verbs.txt", 'r').readlines()])
 prepositions = tuple([i.strip() for i in open("prepositions.txt", 'r').readlines()])
