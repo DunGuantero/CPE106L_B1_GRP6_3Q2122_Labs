@@ -4,11 +4,16 @@ Program: generator_modified.py
 """
 
 import random
-
-articles = tuple([i.strip() for i in open("articles.txt", 'r').readlines()])
-nouns = tuple([i.strip() for i in open("nouns.txt", 'r').readlines()])
-verbs = tuple([i.strip() for i in open("verbs.txt", 'r').readlines()])
-prepositions = tuple([i.strip() for i in open("prepositions.txt", 'r').readlines()])
+try:
+    articles = tuple([i.strip() for i in open("articles.txt", 'r').readlines()])
+    nouns = tuple([i.strip() for i in open("nouns.txt", 'r').readlines()])
+    verbs = tuple([i.strip() for i in open("verbs.txt", 'r').readlines()])
+    prepositions = tuple([i.strip() for i in open("prepositions.txt", 'r').readlines()])
+except:
+    articles = tuple([i.strip() for i in open(input("Input file name: "), 'r').readlines()])
+    nouns = tuple([i.strip() for i in open(input("Input file name: "), 'r').readlines()])
+    verbs = tuple([i.strip() for i in open(input("Input file name: "), 'r').readlines()])
+    prepositions = tuple([i.strip() for i in open(input("Input file name: "), 'r').readlines()])
 
 def sentence():
     return nounPhrase() + " " + verbPhrase()
